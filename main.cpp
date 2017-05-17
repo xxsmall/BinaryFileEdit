@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
    translator->load("/home/xscc/桌面/TestHello/TestHello.qm");
    a.installTranslator(translator);
      ;
+     ;
     MainWindow w;
     w.show();
     
