@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QTranslator *translator = new QTranslator;
-   translator->load("/home/xscc/桌面/TestHello/TestHello.qm");
+   translator->load("/home/桌面/TestHello/TestHello.qm");
    a.installTranslator(translator);
 
     MainWindow w;
