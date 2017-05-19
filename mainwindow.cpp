@@ -788,4 +788,8 @@ void MainWindow::on_pushButton_19_clicked()
     this->ui->pushButton_19->setText("中文界面");
     this->ui->pushButton_3->setText("打开文件1");
     this->ui->pushButton_8->setText("保存文件1");
+
+    this->ui->pushButton_5->setText("查找");
+    this->ui->pushButton_6->setText("下一个");
+    this->ui->pushButton_7->setText("上一个");
 }
