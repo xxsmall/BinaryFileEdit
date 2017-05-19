@@ -792,4 +792,9 @@ void MainWindow::on_pushButton_19_clicked()
     this->ui->pushButton_5->setText("查找");
     this->ui->pushButton_6->setText("下一个");
     this->ui->pushButton_7->setText("上一个");
+
+    this->ui->pushButton_13->setText("打开文件2");
+    this->ui->pushButton_9->setText("保存查找列表");
+    this->ui->pushButton_10->setText("列表内查找");
+
 }
