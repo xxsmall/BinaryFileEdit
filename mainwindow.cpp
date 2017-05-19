@@ -382,7 +382,7 @@ void MainWindow::saveFile()
 
 
           fileObject.close();
-          fileObject.rename("1_1.dat","2_2.dat");
+      //  fileObject.rename("1_1.dat","2_2.dat");
 
           delete writeByte;
       }
