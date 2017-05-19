@@ -46,6 +46,7 @@ public:
     QList<recPosition>  findResaultDiff;//diffrent search resault to save
     QList<qint8> fileList;
     QString fileFirstSaveStr;//use to save file 1 in old path
+    qint64 UIisCN;
 
     void setTableHeader();
     void openFile();

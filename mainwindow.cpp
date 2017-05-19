@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     sizeSecond = -1;
     setTableHeader();
     this->ui->pushButton_19->setText("中文界面");
+    UIisCN=0;
 }
 
 MainWindow::~MainWindow()
@@ -796,5 +797,11 @@ void MainWindow::on_pushButton_19_clicked()
     this->ui->pushButton_13->setText("打开文件2");
     this->ui->pushButton_9->setText("保存查找列表");
     this->ui->pushButton_10->setText("列表内查找");
-
+    this->ui->pushButton_11->setText("上一个");
+    this->ui->pushButton_12->setText("下一个");
+    this->ui->pushButton_14->setText("进行文件比较");
+    this->ui->pushButton_15->setText("不同下一个");
+    this->ui->pushButton_16->setText("不同上一个");
+    this->ui->pushButton_17->setText("转换为16进制");
+    this->ui->pushButton_18->setText("退出程序");
 }

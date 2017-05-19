@@ -2,6 +2,7 @@
 #
 # Project created by QtCreator 2013-06-13T11:12:59
 #
+#   xxsmall@sina.com
 #-------------------------------------------------
 
 QT       += core gui
