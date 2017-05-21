@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     setTableHeader();
     this->ui->pushButton_19->setText("中文界面");
     UIisCN=0;
+    this->ui->pushButton->setVisible(false);
+    this->ui->pushButton_2->setVisible(false);
+    this->ui->pushButton_4->setVisible(false);
 }
 
 MainWindow::~MainWindow()
