@@ -46,11 +46,11 @@ void MainWindow::setTableHeader()
 
     modelFile->setHorizontalHeaderLabels(list);
     modelFileSecond->setHorizontalHeaderLabels(list);
-//    ui->tableView->setModel(modelFile);
-//     ui->tableView_2->setModel(modelFileSecond);
+    //ui->tableView->setModel(modelFile);
+    //ui->tableView_2->setModel(modelFileSecond);
     for(int i=0;i<16;i++)
-    {  // if(i==7)
-        //{
+    {  //if(i==7)
+       //{
        //     ui->tableView->setColumnWidth(i,80);
        //     ui->tableView_2->setColumnWidth(i,80);
        // }else
