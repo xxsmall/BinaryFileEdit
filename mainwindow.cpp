@@ -96,13 +96,12 @@ void MainWindow::openFile()
              modelFile->setItem(n,m,new QStandardItem(str.toUpper()));
              modelFile->item(n,m)->setBackground(QBrush(QColor(128,128,128)));
 
-         //    fileList.append(number);
 
          }
         fileObject.close();
-         row = n;
-         columnEndAt =m;
-         delete readByte;
+        row = n;
+        columnEndAt =m;
+        delete readByte;
     }
 }
 
@@ -374,19 +373,7 @@ void MainWindow::saveFile()
               }
           }
 
-    //      for(int i=0;i<size;i++)
-    //      {
-
-    //          fileObject.seek(i);
-    //          dataStreamObject.writeRawData(writeByte,1);
-
-    //       //   quint8 number=(quint8)readByte[0];
-    //      }
-
-
           fileObject.close();
-      //  fileObject.rename("1_1.dat","2_2.dat");
-
           delete writeByte;
       }
 }
