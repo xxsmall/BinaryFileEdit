@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->ui->pushButton->setVisible(false);
     this->ui->pushButton_2->setVisible(false);
     this->ui->pushButton_4->setVisible(false);
+    cellItemList.clear(); //clear table up item list;
 }
 
 MainWindow::~MainWindow()

@@ -47,6 +47,7 @@ public:
     QList<qint8> fileList;
     QString fileFirstSaveStr;//use to save file 1 in old path
     qint64 UIisCN;
+    QList<QStandardItem*> cellItemList;//save all the table cell item,and clear it when openfile.
 
     void setTableHeader();
     void openFile();
