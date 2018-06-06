@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     //QTranslator *translator = new QTranslator;
-    //2018  06
+    //2018  06   06
     //translator->load("/home/桌面/TestHello/TestHello.qm");
     //a.installTranslator(translator);
     //
