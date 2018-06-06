@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->ui->pushButton_2->setVisible(false);
     this->ui->pushButton_4->setVisible(false);
     cellItemList.clear(); //clear table up item list;
+    cellItemList2.clear(); //clear table up item list;
 }
 
 MainWindow::~MainWindow()
@@ -69,6 +70,18 @@ void MainWindow::openFile()
 
     if(!fileName.isEmpty())
     {
+        if( cellItemList.size()>0)   //delete no use item
+        {
+            for(int kk=0;kk<cellItemList.size();kk++)
+            {
+                delete cellItemList[kk];
+                cellItemList[kk]=NULL;
+            }
+
+            cellItemList.clear();
+
+        }
+
         fileFirstSaveStr = fileName;
         modelFile->clear();// can  decide memory use when open many times
         setTableHeader();
@@ -94,7 +107,9 @@ void MainWindow::openFile()
              m=i-n*16;
 
              str=QString("%1").arg(number, 2, 16, QLatin1Char('0')) ;
-             modelFile->setItem(n,m,new QStandardItem(str.toUpper()));
+             QStandardItem*  tempItem = new QStandardItem(str.toUpper());
+             modelFile->setItem(n,m,tempItem);
+             cellItemList.append(tempItem);
              modelFile->item(n,m)->setBackground(QBrush(QColor(128,128,128)));
 
 
