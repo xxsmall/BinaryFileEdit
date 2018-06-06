@@ -608,6 +608,18 @@ void MainWindow::openFileSecond()
 
     if(!fileName.isEmpty())
     {
+        if( cellItemList2.size()>0)   //delete no use item
+        {
+            for(int kk=0;kk<cellItemList2.size();kk++)
+            {
+                delete cellItemList2[kk];
+                cellItemList2[kk]=NULL;
+            }
+
+            cellItemList2.clear();
+
+        }
+
         modelFileSecond->clear();
         setTableHeader();
         fileObject.setFileName(fileName);
@@ -632,7 +644,9 @@ void MainWindow::openFileSecond()
              m=i-n*16;
 
              str=QString("%1").arg(number, 2, 16, QLatin1Char('0')) ;
-             modelFileSecond->setItem(n,m,new QStandardItem(str.toUpper()));
+             QStandardItem*  tempItem = new QStandardItem(str.toUpper());
+             modelFileSecond->setItem(n,m,tempItem);
+             cellItemList2.append(tempItem);
              modelFileSecond->item(n,m)->setBackground(QBrush(QColor(128,128,128)));
 
          }
@@ -786,7 +800,32 @@ void MainWindow::on_pushButton_17_clicked()
 }
 
 void MainWindow::on_pushButton_18_clicked()
-{
+{   //when exit delet all item
+    if( cellItemList.size()>0)   //delete no use item
+    {
+        for(int kk=0;kk<cellItemList.size();kk++)
+        {
+            delete cellItemList[kk];
+            cellItemList[kk]=NULL;
+        }
+
+        cellItemList.clear();
+
+    }
+
+    if( cellItemList2.size()>0)   //delete no use item
+    {
+        for(int kk=0;kk<cellItemList2.size();kk++)
+        {
+            delete cellItemList2[kk];
+            cellItemList2[kk]=NULL;
+        }
+
+        cellItemList2.clear();
+
+    }
+
+
      this->close();
 }
 
