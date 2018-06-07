@@ -674,10 +674,10 @@ void MainWindow::on_pushButton_14_clicked()
             QModelIndex index,index2 ;
             QString str,str2;
             quint8 hex,hex2;
-             bool ok;
-             recPosition single;
-             QVariant data;
-            for(int i=0;i<row;i++)
+            bool ok,ok2;
+            recPosition single;
+            QVariant data;
+            for(int i=0;i<=row;i++) //fix first line not compare
             {
                     for(int j=0;j<16;j++)
                     {
@@ -692,15 +692,22 @@ void MainWindow::on_pushButton_14_clicked()
                                      index2 = model2->index(i,j);
                                      data = model2->data(index2);
                                      str2=data.toString();
-                                     hex2 = str2.toInt(&ok, 16);       // hex == 255, ok == true
-                                     if(hex!=hex2)
+                                     hex2 = str2.toInt(&ok2, 16);       // hex == 255, ok == true
+                                     if(ok && ok2)
                                      {
+                                         qDebug()<<"str to int ok "<<i<<" "<<j;
+                                         if(hex!=hex2)
+                                         {
 
-                                         single.row=i;
-                                         single.columnStart=j;
-                                         findResaultDiff.append(single);
+                                             single.row=i;
+                                             single.columnStart=j;
+                                             findResaultDiff.append(single);
+                                         }
+                                     }else
+                                     {
+                                         qDebug()<<"str to int fail "<<i<<" "<<j;
                                      }
-                                ;
+
                             }
                             else
                             {
@@ -719,6 +726,9 @@ void MainWindow::on_pushButton_14_clicked()
             {
                 ui->label_3->setText("no diff !");
             }
+    }else
+    {
+        ui->label_3->setText("file1 and file2 not same size ! give up compare!");
     }
 
 }
