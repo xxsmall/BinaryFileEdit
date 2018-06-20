@@ -271,7 +271,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>no file open !</string>
     </property>
    </widget>
    <widget class="QTableView" name="tableView_2">
@@ -426,7 +426,7 @@
      <x>0</x>
      <y>0</y>
      <width>1199</width>
-     <height>28</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
