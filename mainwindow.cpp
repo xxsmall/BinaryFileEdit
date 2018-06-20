@@ -5,11 +5,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+	//2018.06.20
     ui->setupUi(this);
     modelFile = new QStandardItemModel();
     modelFileSecond = new QStandardItemModel();
     ui->tableView->setModel(modelFile);
-     ui->tableView_2->setModel(modelFileSecond);
+    ui->tableView_2->setModel(modelFileSecond);
     size = -1;
     sizeSecond = -1;
     setTableHeader();
